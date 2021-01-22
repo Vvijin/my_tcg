@@ -22,10 +22,10 @@ export default {
         "param": '{"limit": 10, "cards":[]}'
     },
 
-    // "cemetary": {
-    //     "class": CemetaryConfig,
-    //     "param": '{"cards":[]}'
-    // },
+    "cemetary": {
+        "class": CemetaryConfig,
+        "param": '{"cards":[]}'
+    },
 
     // "player": {
     //     "class": PlayerConfig,

@@ -1,8 +1,5 @@
 import Deck from '../src/models/deck'
-import Config from '../src/models/config'
 
-var param = JSON.parse(Config.deck.param)
-const deck = new Deck(param)
 
 describe('Deck', function () {
   describe('shuffle', function () {
