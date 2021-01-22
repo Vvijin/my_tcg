@@ -1,6 +1,7 @@
 import Player from '../src/models/player';
 import config from '../src/models/config';
 
+
 describe('PLAYER', function () {
     describe('shuffle', function () {
 

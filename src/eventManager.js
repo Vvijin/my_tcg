@@ -1,5 +1,5 @@
 
-module.exports = class EventManager {
+export default class EventManager {
 
     constructor () {
         this.mlisteners = {};

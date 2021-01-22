@@ -1,5 +1,4 @@
-let Deck = require('./deck');
-
-module.exports =  class Cemetray extends Deck{
+import Deck from './deck';
+export default class Cematary extends Deck{
     
 }
