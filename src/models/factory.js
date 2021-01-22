@@ -1,6 +1,5 @@
 import models from './config';
 
-// var $ = require('jquery-browserify');
 var env = "prod";
 
 export default {

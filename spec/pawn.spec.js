@@ -1,72 +1,47 @@
 import Pawn from '../src/models/pawn';
 
-const life = 100;
-const lifeUndefined = undefined;
-const lifeNull = null;
-
+const life = 200;
 const strength = 100;
-const strengthUndefined = undefined;
-const strengthNull = null;
-
 const def = 100;
-const defUndefined = undefined;
-const defNull = null;
+
+// const life2 = 200;
+// const strength2 = 100;
+// const def2 = 100;
 
 describe('PAWN', function () {
   describe("getLife", function() {
 
-    it("getLife is OK !", function() {
+    it("Points :getLife", function() {
         let pawn = new Pawn(life,strength,def);
 
-       expect(pawn.getLife(life)).not.toBe(false);
-    });
-    it("life is not undefined !", function() {
-      let pawn = new Pawn(life,strength,def);
-
-     expect(pawn.getLife(lifeUndefined)).toBe(false);
-    });
-    it("life is not null !", function() {
-      let pawn = new Pawn(life,strength,def);
-
-     expect(pawn.getLife(lifeNull)).toBe(false);
+       expect(pawn.getLife(life)).toBe(200);
     });
   });
   
   describe("getStrength", function() {
 
-    it("getStrength is OK !", function() {
+    it("Points :getStrength", function() {
         let pawn = new Pawn(life,strength,def);
 
-       expect(pawn.getStrength(strength)).not.toBe(false);
+       expect(pawn.getStrength(strength)).toBe(100);
     });
-    it("strength is not undefined !", function() {
-      let pawn = new Pawn(life,strength,def);
 
-     expect(pawn.getStrength(strengthUndefined)).toBe(false);
-    });
-    it("strength is not null !", function() {
-      let pawn = new Pawn(life,strength,def);
-
-     expect(pawn.getStrength(strengthNull)).toBe(false);
-    });
   });
 
   describe("getDef", function() {
 
-    it("getDef is OK !", function() {
+    it("Points : getDef", function() {
         let pawn = new Pawn(life,strength,def);
 
-       expect(pawn.getDef(def)).not.toBe(false);
-    });
-    it("def is not undefined !", function() {
-      let pawn = new Pawn(life,strength,def);
-
-     expect(pawn.getDef(defUndefined)).toBe(false);
-    });
-    it("def is not null !", function() {
-      let pawn = new Pawn(life,strength,def);
-
-     expect(pawn.getDef(defNull)).toBe(false);
+       expect(pawn.getDef(def)).toBe(100);
     });
   });
+
+//   describe('recieveAttack', function () {
+//     it("Attaque & defense contre attaque", function () {
+//       let pawn1 = new Pawn(life,strength,def);
+//       let pawn2 =new Pawn(life2,strength2,def2);
+//         expect(pawn1.recieveAttack(pawn2)).toBe(true);
+//     });
+// });
 })

@@ -1,64 +1,43 @@
-import Deck from '../src/models/deck';
+import Deck from '../src/models/deck'
+import Config from '../src/models/config'
+
+var param = JSON.parse(Config.deck.param)
+const deck = new Deck(param)
 
 describe('Deck', function () {
-describe("shuffle", function() {
+  describe('shuffle', function () {
+    it('Mixed up', function () {
+      const config = { cards: [1, 2, 3, 4] }
+      let deck = new Deck(config)
 
-    it("deck shuffle !", function() {
-        const config = { cards : [1,2,3,4] };
-        let deck = new Deck(config);
+      expect(deck.shuffle()).toBe(true)
+    })
 
-       expect(deck.shuffle()).toBe(true);
-    });
-    
-    it("deck not empty !", function() {
-        const config2 = { cards : [] }
-        let deck = new Deck(config2);
+    it('deck without cards ', function () {
+      const config = { cards: [] }
+      let deck = new Deck(config)
 
-        expect(deck.shuffle()).toBe(false);
-    });
-    
-    it("deck is not bolean !", function() {
-        const config3 = { cards : [true,true,true] }
-        let deck = new Deck(config3);
-        expect(deck.shuffle()).toBe(true);
-    });
-    it("deck is not null !", function() {
-        const config3 = { cards : [null,null,null] }
-        let deck = new Deck(config3);
-        expect(deck.shuffle()).toBe(true);
-    });
-    it("deck is not string !", function() {
-        const config3 = { cards : ["lol","mdr","hihih"] }
-        let deck = new Deck(config3);
-        expect(deck.shuffle()).toBe(false);
-    });
-    it("deck is not undefined !", function() {
-        const config3 = { cards : [undefined,undefined,undefined] }
-        let deck = new Deck(config3);
-        expect(deck.shuffle()).toBe(false);
-    });
+      expect(deck.shuffle()).toBe(false)
+    })
+  })
 
-  });
+  describe('draw', function () {
+    it('draw : pioche,retourne et retire la carte', function () {
+      const config = { cards: [1, 2, 3] }
+      const pioche = 1
+      let deck = new Deck(config)
 
-describe("draw",function(){
+      expect(deck.draw(config)).toEqual(pioche)
+    })
+  })
 
-    it("draw is OK !",function(){
-        const config = { cards: [1,2,3] }
-        const result = 1;
-        let deck = new Deck(config);
+  describe('getCardsCount', function () {
+    it('getCardsCount : Retourne les cartes du Deck ', function () {
+      const config = { cards: [1, 2, 3] }
+      const pioche = 3
+      let deck = new Deck(config)
 
-        expect(deck.draw(config)).toEqual(result);
-    });
-});
-
-describe("getCardsCount",function(){
-
-    it("getCardsCount is OK !",function(){
-        const config = { cards: [1,2,3] }
-        const result = 3;
-        let deck = new Deck(config);
-
-        expect(deck.getCardsCount(config)).toEqual(result);
-    });
-});
+      expect(deck.getCardsCount(config)).toEqual(pioche)
+    })
+  })
 })

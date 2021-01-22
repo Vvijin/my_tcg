@@ -3,16 +3,10 @@ import EventManager from '../eventManager';
 export default class Pawn extends EventManager{
 
     constructor(life,strength,def){
-        // if (new.target === Pawn) {
-        //     throw new TypeError("Cannot construct Abstract instances directly");
-        //   }
         super();
         this.life=life;
         this.strength=strength;
         this.def=def;
-        // this.getLife(life);
-        // this.getStrength(strength);
-        // this.getDef(def);
     }
     getLife(life){
         if (typeof life == "undefined" || life == null){

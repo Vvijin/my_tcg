@@ -2,8 +2,7 @@ module.exports = class Deck {
     constructor (config){
         this.cards = config.cards;
     }
-    
-    shuffle () {
+        shuffle () {
         if(this.cards.length == 0 || this.cards.some(isNaN)){            
             return false
         }

@@ -1,33 +1,39 @@
-import GameModel from './game';
-import DeckModel from './deck';
-import PlayerModel from './player';
-import HandModel from './hand';
-import BoardModel from './board';
-import CemetaryModel from './cemetary';
+import DeckConfig from './deck';
+import HandConfig from './hand';
+import BoardConfig from './board';
+import CemetaryConfig from './cemetary';
+import PlayerConfig from './player';
+import GameConfig from './game';
 
 export default {
-    "game": {
-        "class": GameModel,
-        "param": '{}'
-    },
+
     "deck": {
-        "class": DeckModel,
+        "class": DeckConfig,
         "param": '{"cards" : [{"face":"card-1"}, {"face":"card-2"}, {"face":"card-3"}, {"face":"card-4"}, {"face":"card-5"}, {"face":"card-6"}]}'
     },
-    "player": {
-        "class": PlayerModel,
-        "param": '{}'
-    },
+
     "hand": {
-        "class": HandModel,
+        "class": HandConfig,
         "param": '{"limit": 7, "cards":[]}'
     },
+
     "board": {
-        "class": BoardModel,
+        "class": BoardConfig,
         "param": '{"limit": 10, "cards":[]}'
     },
-    "cemetary": {
-        "class": CemetaryModel,
-        "param": '{"cards":[]}'
+
+    // "cemetary": {
+    //     "class": CemetaryConfig,
+    //     "param": '{"cards":[]}'
+    // },
+
+    // "player": {
+    //     "class": PlayerConfig,
+    //     "param": '{}'
+    // },
+
+    "game": {
+        "class": GameConfig,
+        "param": '{}'
     }
 }
